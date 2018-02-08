@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
         completionHandler(Int(UNNotificationPresentationOptions.alert.rawValue))
     }
     
+    // 处理APNs通知回调方法
     func jpushNotificationCenter(_ center: UNUserNotificationCenter!, didReceive response: UNNotificationResponse!, withCompletionHandler completionHandler: (() -> Void)!) {
         let userInfo = response.notification.request.content.userInfo
         if response.notification.request.trigger is UNPushNotificationTrigger {
