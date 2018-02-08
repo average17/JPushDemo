@@ -34,9 +34,7 @@ class ViewController: UIViewController {
             // 用户关闭通知权限
             case .denied:
                 DispatchQueue.main.async(execute: { () -> Void in
-                    let alertController = UIAlertController(title: "消息推送已关闭",
-                                                            message: "想要及时获取消息。点击“设置”，开启通知。",
-                                                            preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "消息推送已关闭", message: "想要及时获取消息。点击“设置”，开启通知。", preferredStyle: .alert)
                     
                     let cancelAction = UIAlertAction(title:"取消", style: .cancel, handler:nil)
                     
@@ -45,9 +43,8 @@ class ViewController: UIViewController {
                         let url = URL(string: UIApplicationOpenSettingsURLString)
                         if let url = url, UIApplication.shared.canOpenURL(url) {
                             if #available(iOS 10, *) {
-                                UIApplication.shared.open(url, options: [:],
-                                                          completionHandler: {
-                                                            (success) in
+                                UIApplication.shared.open(url, options: [:], completionHandler: {
+                                    (success) in
                                 })
                             } else {
                                 UIApplication.shared.openURL(url)
