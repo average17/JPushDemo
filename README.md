@@ -19,7 +19,11 @@
 
 推送使用示例如下：
 
+发送通知
+
 ![发送通知](https://github.com/average17/JPushDemo/blob/master/screenshots/Snip20180208_2.png)
+
+发送自定义消息
 
 ![自定义消息](https://github.com/average17/JPushDemo/blob/master/screenshots/Snip20180208_3.png)
 
@@ -27,7 +31,7 @@
 因为极光推送文档里的环境配置使用的是OC代码，如果对OC不熟悉的话，可以参考以下翻译成Swift的代码，如果你是OC大牛，那就忽略这里
 
 ## 添加头文件
-因为极光推送的框架JPush是OC写的框架，Swift不能直接使用，所以需要创建一个桥接文件，会创建桥接文件的直接复制代码即可，不会创建桥接文件的，并且工程下没有OC文件(.m文件的)可以直接File->New->File->Objective-C File，然后任意输入一个文件名，这时会提示你是否自动创建桥接文件，选择是，就会创建一个桥接文件了，然后我们把下面的代码复制到xxx-Bridging-Header文件中
+因为极光推送的框架JPush是OC写的框架，Swift不能直接使用，所以需要创建一个桥接文件，会创建桥接文件的直接复制代码即可，不会创建桥接文件的，并且工程下没有OC文件(.m文件的)可以直接File->New->File->Objective-C File，然后任意输入一个文件名，这时会提示你是否自动创建桥接文件，选择是，就会创建一个桥接文件了，然后我们把下面的代码复制到xxx-Bridging-Header.h文件中
 ```
 // 引入JPush功能所需头文件
 #import "JPUSHService.h"
